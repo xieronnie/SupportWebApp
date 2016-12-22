@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ASA Support Request</title>
+		<link rel="stylesheet" type="text/css" href="view.css" media="all">
+		<script type="text/javascript" src="view.js"></script>
+
+		<script src="gen_validatorv4.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	</head>
+
+	<body id="main_body" >
+
+		<div id="form_container">
+
+			<form id="myForm" class="appnitro" enctype="multipart/form-data" onsubmit="return (validateForm());"
+			method="post" action="contact.php">
+
+				<div class="form_description">
+					<div>
+						<img id="avaya" src="images/avayargb.jpg" alt="" width="615" height="100" </div>
+						<h2>
+						ASA Support Request</h2>
+						<p>Please answer the form as accurately as possible to expedite your request.</p>
+
+						</div>
+						<ul >
+
+						<li id="li_1" >
+						<label class="description" for="element_1">Name </label>
+						<span>
+						<input id="element_1_1" name= "element_1_1" class="element text" maxlength="255" size="8" value=""/>
+						<label>First</label>
+						</span>
+						<span>
+						<input id="element_1_2" name= "element_1_2" class="element text" maxlength="255" size="14" value=""/>
+						<label>Last</label>
+						</span>
+						</li>		<li id="li_2" >
+						<label class="description" for="element_2">Email </label>
+						<div>
+						<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/>
+						</div><p class="guidelines" id="guide_2"><small>Please enter your e-mail
+						</small></p>
+						</li>		<li id="li_11" >
+						<label class="description" for="element_11">Phone </label>
+						<span>
+						<input id="element_11_1" name="element_11_1" class="element text" size="3" maxlength="3" value="" type="text"> -
+						<label for="element_11_1">(###)</label>
+						</span>
+						<span>
+						<input id="element_11_2" name="element_11_2" class="element text" size="3" maxlength="3" value="" type="text"> -
+						<label for="element_11_2">###</label>
+						</span>
+						<span>
+						<input id="element_11_3" name="element_11_3" class="element text" size="4" maxlength="4" value="" type="text">
+						<label for="element_11_3">####</label>
+						</span>
+
+						</li>		<li id="li_3" >
+						<label class="description" for="element_3">Organization </label>
+						<div>
+						<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/>
+						</div><p class="guidelines" id="guide_3"><small>Please tell us which organization you represent. Eventually this will be a drop-down box</small></p>
+						</li>		<li id="li_5" >
+						<label class="description" for="element_5">Select Servicing Category </label>
+						<span>
+						<input id="element_5_1" name="element_5" class="element radio" type="radio"  onchange="changed();" value="UC" />
+						<label class="choice" for="element_5_1">Unified Communication</label>
+						<input id="element_5_2" name="element_5" class="element radio" type="radio" onchange="changed();"value="CC" />
+						<label class="choice" for="element_5_2">Contact Center</label>
+
+						</span><p class="guidelines" id="guide_5"><small>Please choose one</small></p>
+						</li>		<li id="li_6" >
+						<label class="description" for="element_6">If Unified Communication, which type of PBX? </label>
+						<span>
+						<input id="element_6_1" name="element_6" class="element radio" type="radio" onchange="changed();" value="CS1000" />
+						<label class="choice" for="element_6_1">CS1000</label>
+						<input id="element_6_2" name="element_6" class="element radio" type="radio" onchange="changed();" value="CM" />
+						<label class="choice" for="element_6_2">Communication Manager</label>
+
+						</span>
+						</li>
+						<li id="li_7" >
+							<label class="description" for="element_7">Unified Communication Topic </label>
+							<div>
+								<select class="element select medium" id="element_7" name="element_7" onchange="changed();">
+									<option value="" selected="selected"></option>
+									<option value="Session Manager" >Session Manager</option>
+									<option value="Communication Manager" >Communication Manager</option>
+									<option value="System Manager" >System Manager</option>
+									<option value="Session Border Controller" >Session Border Controller</option>
+									<option value="Collaboration Environment" >Collaboration Environment</option>
+									<option value="VMWare" >VMWare</option>
+									<option value="Other" >Other</option>
+
+								</select>
+							</div>
+						</li>
+
+						</li>
+						<li id="li_7_1" >
+							<label class="description" id="integratedUC" for="element_7_1">...integrated with </label>
+							<div>
+								<select class="element select medium" id="element_7_1" name="element_7_1" onchange="changed();">
+									<option value="" selected="selected"></option>
+									<option value="AAM" >AAM</option>
+									<option value="AEP" >AEP</option>
+									<option value="IC" >IC</option>
+									<option value="AACM" >AACM</option>
+									<option value=" Call Recording" > Call Recording</option>
+									<option value="CES" >CES</option>
+									<option value="Other" >Other</option>
+
+								</select>
+							</div>
+						</li>
+
+						<li id="li_8" >
+							<label class="description" for="element_8"> Contact Center Topic </label>
+							<div>
+								<select class="element select medium" id="element_8" name="element_8" onchange="changed();">
+									<option value="" selected="selected"></option>
+
+									<option value="Avaya Call Center Elite" >Avaya Call Center Elite</option>
+									<option value="CMS" >CMS</option>
+									<option value="AACC" >AACC</option>
+									<option value="IC" >IC</option>
+									<option value="Experience Portal" >Experience Portal</option>
+									<option value="Proactive Outreach  Manager" >Proactive Outreach  Manager</option>
+									<option value="WFO Suite" >WFO Suite</option>
+									<option value="Other" >Other</option>
+
+								</select>
+							</div>
+						</li>
+						<li id="li_9" >
+							<label id="descript" class="description" for="element_9"> Please describe your question </label>
+							<div>
+								<textarea id="element_9" name="element_9" class="element textarea medium"></textarea>
+							</div>
+						</li>
+						<li id="li_10" >
+							<label class="description" for="element_10">Upload a File </label>
+							<div>
+								<input id="element_10" name="element_10" class="element file" type="file"/>
+							</div>
+							<p class="guidelines" id="guide_10">
+								<small>All necessary documents to complete your service request</small>
+							</p>
+						</li>
+
+						<li class="buttons">
+							<input type="hidden" name="form_id" value="896743" />
+
+							<input id="saveForm"  class="button_text" type="submit" name="submit" value="Submit" />
+
+						</li>
+
+						<p style="text-align:center; font-size:75%">
+							
+						</p>
+						</ul>
+			</form>
+
+			<script type="text/javascript">
+				{
+					var frmvalidator = new Validator("myForm");
+
+					frmvalidator.addValidation("element_1_1", "req", "Please input your name");
+					frmvalidator.addValidation("element_1_1", "maxlength=12", "Your first name should be less than 12 alphabetical characters");
+					frmvalidator.addValidation("element_1_1", "alpha", "Your first name should be less than 12 alphabetical characters");
+
+					frmvalidator.addValidation("element_1_2", "req", "Please input your last name");
+					frmvalidator.addValidation("element_1_2", "maxlength=12", "Your last name should be less than 12 alphabetical characters");
+					frmvalidator.addValidation("element_1_2", "alpha", "Your last name should be less than 12 alphabetical characters");
+
+					frmvalidator.addValidation("element_2", "req", "Please input your email");
+					frmvalidator.addValidation("element_2", "email", "Please input a valid email");
+
+					frmvalidator.addValidation("element_3", "req", "Please input your organization");
+					frmvalidator.addValidation("element_3", "maxlength=15", "Your organization should be less than 15 alphabetical characters");
+
+					frmvalidator.addValidation("element_5", "selone_radio", "Please select a servicing category");
+
+					frmvalidator.addValidation("element_6", "selone_radio", "Please select PBX type");
+
+					frmvalidator.addValidation("element_9", "req", "Please describe your inquiry");
+
+				}
+
+			</script>
+
+			<script>
+				function changed() {
+
+					if (document.getElementById('element_5_1').checked) {
+						document.getElementById('descript').innerHTML = "Please describe your " + document.getElementById('element_7').value + " integrated with " + document.getElementById('element_7_1').value + " question.";
+						document.getElementById('integratedUC').innerHTML = document.getElementById('element_7').value + " integrated with...";
+						document.getElementById('element_8').disabled = true;
+						document.getElementById('element_6_1').disabled = false;
+						document.getElementById('element_6_2').disabled = false;
+						document.getElementById('element_7').disabled = false;
+						document.getElementById("element_8").value = "";
+
+					} else if (document.getElementById('element_5_2').checked) {
+
+						document.getElementById('descript').innerHTML = "Please describe your " + document.getElementById('element_8').value + " Contact Center question.";
+						document.getElementById('element_7').disabled = true;
+						document.getElementById('element_8').disabled = false;
+						document.getElementById('element_6_1').disabled = true;
+						document.getElementById('element_6_2').disabled = true;
+						document.getElementById('element_6_1').checked = false;
+						document.getElementById('element_6_2').checked = false;
+						document.getElementById('element_7_1').disabled = true;
+						document.getElementById("element_7").value = "";
+						document.getElementById("element_7_1").value = "";
+					}
+				}
+
+			</script>
+
+		</div>
+		<img id="bottom" src="images/bottom.png" alt="">
+	</body>
+</html>
